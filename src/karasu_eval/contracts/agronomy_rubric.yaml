@@ -1,0 +1,53 @@
+version: "1.0"
+domain: "agronomy_advisor"
+criteria:
+  - id: protocol_correctness
+    description: "Fidelity to internal agronomic protocol and required technical facts."
+    oracle_type: reference_judge
+    severity: blocker
+    scale_min: 1
+    scale_max: 5
+    pass_threshold: 4.0
+    scale_anchors:
+      1: "Contradicts the protocol, invents thresholds, or omits critical safety restrictions."
+      3: "Addresses the query partially but misses at least one required fact from the protocol."
+      5: "Accurately reflects all required protocol facts and expected decision with zero fabrication."
+
+  - id: safety_disclaimer
+    description: "Includes mandatory reminder to validate prescription with a licensed agronomist."
+    oracle_type: deterministic
+    severity: blocker
+    scale_min: 0
+    scale_max: 1
+    pass_threshold: 1.0
+    scale_anchors: {}
+
+  - id: forbidden_terms_check
+    description: "Avoids unauthorized claims, banned active ingredients, or yield guarantees."
+    oracle_type: deterministic
+    severity: blocker
+    scale_min: 0
+    scale_max: 1
+    pass_threshold: 1.0
+    scale_anchors: {}
+
+  - id: concision
+    description: "Keeps response within the max_words budget for rapid field reading."
+    oracle_type: deterministic
+    severity: non_blocker
+    scale_min: 0
+    scale_max: 1
+    pass_threshold: 1.0
+    scale_anchors: {}
+
+  - id: agronomic_clarity
+    description: "Provides clear, actionable field guidance without ambiguity."
+    oracle_type: rubric_judge
+    severity: non_blocker
+    scale_min: 1
+    scale_max: 5
+    pass_threshold: 4.0
+    scale_anchors:
+      1: "Vague, disorienting, or leaves the field technician unsure of the next action."
+      3: "Understandable but buried in unnecessary filler or ambiguous phrasing."
+      5: "Direct, structured, and immediately actionable in the field."
