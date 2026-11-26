@@ -18,7 +18,7 @@ class CriterionConfig(BaseModel):
     scale_min: int
     scale_max: int
     pass_threshold: float
-    scale_anchors: dict[int, str] = Field(default_factory=dict)
+    scale_anchors: dict[int, str] = Field(default_factory=dict[int, str])
 
     @model_validator(mode="after")
     def validate_scale_and_anchors(self) -> Self:
@@ -90,3 +90,39 @@ def load_eval_cases(path: Path) -> list[EvalCase]:
         except Exception as exc:
             raise ValueError(f"Invalid eval case at line {line_number}: {exc}") from exc
     return cases
+
+
+class CaseEvaluation(BaseModel):
+    case_id: str
+    response: str
+    results: list[CriterionResult]
+
+
+class RunSummary(BaseModel):
+    contract_version: str
+    blocker_criterion_ids: list[str]
+    evaluations: list[CaseEvaluation]
+
+    @property
+    def all_results(self) -> list[CriterionResult]:
+        return [result for item in self.evaluations for result in item.results]
+
+    @property
+    def blocker_failures(self) -> int:
+        return sum(
+            1
+            for result in self.all_results
+            if result.verdict == "FAIL"
+            and result.criterion_id in self.blocker_criterion_ids
+        )
+
+    @property
+    def review_count(self) -> int:
+        return sum(1 for result in self.all_results if result.verdict == "REVIEW")
+
+    @property
+    def pass_rate(self) -> float:
+        results = self.all_results
+        if not results:
+            return 0.0
+        return sum(1 for result in results if result.verdict == "PASS") / len(results)

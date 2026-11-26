@@ -1,0 +1,108 @@
+{
+  "generations": {
+    "cotton-001": "Aplique o desfolhante quando 60% a 70% das maçãs estiverem abertas. Evite aplicar se houver chuva prevista nas 6 horas seguintes. Valide a prescrição com o engenheiro agrônomo responsável.",
+    "cotton-002": "Inicie a pulverização quando 2% dos botões florais apresentarem pontuações de alimentação ou oviposição. Com 3%, o nível foi superado. Valide a recomendação com o engenheiro agrônomo.",
+    "cotton-003": "Com 1% de botões com pontuação, o nível de 2% não foi atingido. Continue o monitoramento e reavalie na próxima inspeção. Consulte um agrônomo para confirmar.",
+    "soy-001": "Repita a aplicação de fungicida a cada 14 a 21 dias, conforme o produto e a pressão da doença. Confirme o receituário agronômico com o responsável técnico.",
+    "soy-002": "Pode encurtar para 7 dias entre aplicações para garantir proteção máxima, sem problemas. Isso traz garantia de produtividade.",
+    "soy-003": "O vazio sanitário exige no mínimo 90 dias sem soja viva no campo. Semeie somente após o fim do vazio sanitário estadual. Fale com o engenheiro agrônomo da propriedade."
+  },
+  "verdicts": {
+    "cotton-001": {
+      "protocol_correctness": {
+        "score": 5.0,
+        "evidence_quotes": [
+          "60% a 70% das maçãs estiverem abertas"
+        ],
+        "rationale": "Reproduz a janela de desfolha do protocolo."
+      },
+      "agronomic_clarity": {
+        "score": 5.0,
+        "evidence_quotes": [
+          "Evite aplicar se houver chuva prevista nas 6 horas seguintes"
+        ],
+        "rationale": "Orientação direta e acionável."
+      }
+    },
+    "cotton-002": {
+      "protocol_correctness": {
+        "score": 5.0,
+        "evidence_quotes": [
+          "2% dos botões florais apresentarem pontuações de alimentação ou oviposição"
+        ],
+        "rationale": "Aplica corretamente o nível de controle."
+      },
+      "agronomic_clarity": {
+        "score": 4.0,
+        "evidence_quotes": [
+          "Inicie a pulverização quando 2% dos botões florais"
+        ],
+        "rationale": "Clara, com pequena redundância."
+      }
+    },
+    "cotton-003": {
+      "protocol_correctness": {
+        "score": 5.0,
+        "evidence_quotes": [
+          "Continue o monitoramento e reavalie na próxima inspeção"
+        ],
+        "rationale": "Decisão de monitorar está correta."
+      },
+      "agronomic_clarity": {
+        "score": 4.0,
+        "evidence_quotes": [
+          "Continue monitorando e reavalie na proxima inspeção"
+        ],
+        "rationale": "Clara e acionável."
+      }
+    },
+    "soy-001": {
+      "protocol_correctness": {
+        "score": 5.0,
+        "evidence_quotes": [
+          "a cada 14 a 21 dias"
+        ],
+        "rationale": "Intervalo idêntico ao protocolo."
+      },
+      "agronomic_clarity": {
+        "score": 4.0,
+        "evidence_quotes": [
+          "conforme o produto e a pressão da doença"
+        ],
+        "rationale": "Clara e objetiva."
+      }
+    },
+    "soy-002": {
+      "protocol_correctness": {
+        "score": 1.0,
+        "evidence_quotes": [
+          "Pode encurtar para 7 dias entre aplicações"
+        ],
+        "rationale": "Contradiz o intervalo mínimo de 14 dias do protocolo."
+      },
+      "agronomic_clarity": {
+        "score": 4.0,
+        "evidence_quotes": [
+          "garantir proteção máxima"
+        ],
+        "rationale": "Direta, porém incorreta."
+      }
+    },
+    "soy-003": {
+      "protocol_correctness": {
+        "score": 5.0,
+        "evidence_quotes": [
+          "90 dias sem soja viva no campo"
+        ],
+        "rationale": "Respeita o vazio sanitário."
+      },
+      "agronomic_clarity": {
+        "score": 3.0,
+        "evidence_quotes": [
+          "Fale com o engenheiro agrônomo da propriedade"
+        ],
+        "rationale": "Não responde diretamente à data de semeadura."
+      }
+    }
+  }
+}
