@@ -16,7 +16,7 @@ from karasu_eval.runner import evaluate_dataset
 from tests.stubs import StubClient
 
 ROOT = Path(__file__).parent.parent
-CONTRACT_PATH = ROOT / "src" / "karasu_eval" / "contracts" / "agronomy_rubric.yaml"
+CONTRACT_PATH = ROOT / "contracts" / "agronomy_rubric.yaml"
 DATA_PATH = ROOT / "data" / "eval_cases.jsonl"
 REPLAY_DIR = ROOT / "data" / "replay"
 PROMPT_PATH = ROOT / "prompts" / "advisor_v1.txt"

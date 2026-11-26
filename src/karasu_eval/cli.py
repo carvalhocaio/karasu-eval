@@ -9,7 +9,7 @@ from karasu_eval.client import ModelClient, OpenAIClient, ReplayClient
 from karasu_eval.models import RunSummary, load_contract, load_eval_cases
 from karasu_eval.runner import evaluate_dataset
 
-DEFAULT_CONTRACT = Path(__file__).parent / "contracts" / "agronomy_rubric.yaml"
+DEFAULT_CONTRACT = Path("contracts/agronomy_rubric.yaml")
 VERDICT_STYLES = {"PASS": "green", "FAIL": "red", "REVIEW": "yellow"}
 
 
