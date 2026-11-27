@@ -1,0 +1,12 @@
+{"case_id": "cotton-001", "criterion_id": "protocol_correctness", "expected_verdict": "PASS"}
+{"case_id": "cotton-002", "criterion_id": "protocol_correctness", "expected_verdict": "PASS"}
+{"case_id": "cotton-003", "criterion_id": "protocol_correctness", "expected_verdict": "PASS"}
+{"case_id": "soy-001", "criterion_id": "protocol_correctness", "expected_verdict": "PASS"}
+{"case_id": "soy-002", "criterion_id": "protocol_correctness", "expected_verdict": "FAIL"}
+{"case_id": "soy-003", "criterion_id": "protocol_correctness", "expected_verdict": "PASS"}
+{"case_id": "cotton-001", "criterion_id": "agronomic_clarity", "expected_verdict": "PASS"}
+{"case_id": "cotton-002", "criterion_id": "agronomic_clarity", "expected_verdict": "PASS"}
+{"case_id": "cotton-003", "criterion_id": "agronomic_clarity", "expected_verdict": "PASS"}
+{"case_id": "soy-001", "criterion_id": "agronomic_clarity", "expected_verdict": "PASS"}
+{"case_id": "soy-002", "criterion_id": "agronomic_clarity", "expected_verdict": "PASS"}
+{"case_id": "soy-003", "criterion_id": "agronomic_clarity", "expected_verdict": "FAIL"}

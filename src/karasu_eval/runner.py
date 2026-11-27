@@ -32,7 +32,9 @@ def evaluate_dataset(
     for case in cases:
         response = client.generate(system_prompt, case)
         results = [
-            grade_criterion(criterion, response, case, client)
+            grade_criterion(criterion, response, case, client).model_copy(
+                update={"case_id": case.id}
+            )
             for criterion in contract.criteria
         ]
         evaluations.append(

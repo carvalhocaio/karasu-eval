@@ -1,0 +1,108 @@
+{
+  "generations": {
+    "cotton-001": "Aplique o desfolhante quando 60% a 70% das maçãs estiverem abertas. Não aplique com chuva prevista nas 6 horas seguintes. Valide a prescrição com o engenheiro agrônomo responsável.",
+    "cotton-002": "Sim, pulverize agora: com 3%, superou o nível de 2% dos botões florais com pontuações. Valide a recomendação com o engenheiro agrônomo.",
+    "cotton-003": "Não aplique hoje: 1% está abaixo do nível de controle de 2%. Continue o monitoramento e reavalie na próxima inspeção. Consulte um agrônomo.",
+    "soy-001": "Repita a aplicação de fungicida a cada 14 a 21 dias, conforme o produto e a pressão da doença. Confirme o receituário agronômico com o responsável técnico.",
+    "soy-002": "Não encurte para 7 dias. O protocolo exige intervalo de 14 a 21 dias conforme o produto e a pressão da doença. Valide a prescrição com o engenheiro agrônomo.",
+    "soy-003": "Sim, você pode semear agora, pois o vazio sanitário estadual de no mínimo 90 dias já terminou. Confirme o planejamento com o engenheiro agrônomo responsável."
+  },
+  "verdicts": {
+    "cotton-001": {
+      "protocol_correctness": {
+        "score": 5.0,
+        "evidence_quotes": [
+          "60% a 70% das maçãs estiverem abertas"
+        ],
+        "rationale": "Reproduz integralmente a janela e a restrição de chuva do protocolo."
+      },
+      "agronomic_clarity": {
+        "score": 5.0,
+        "evidence_quotes": [
+          "Não aplique com chuva prevista nas 6 horas seguintes"
+        ],
+        "rationale": "Orientação direta e acionável."
+      }
+    },
+    "cotton-002": {
+      "protocol_correctness": {
+        "score": 5.0,
+        "evidence_quotes": [
+          "superou o nível de 2% dos botões florais com pontuações"
+        ],
+        "rationale": "Aplica corretamente o limiar de controle do bicudo."
+      },
+      "agronomic_clarity": {
+        "score": 5.0,
+        "evidence_quotes": [
+          "Sim, pulverize agora"
+        ],
+        "rationale": "Decisão imediata e clara para o campo."
+      }
+    },
+    "cotton-003": {
+      "protocol_correctness": {
+        "score": 5.0,
+        "evidence_quotes": [
+          "1% está abaixo do nível de controle de 2%"
+        ],
+        "rationale": "Decisão de monitorar está alinhada ao protocolo."
+      },
+      "agronomic_clarity": {
+        "score": 5.0,
+        "evidence_quotes": [
+          "Continue o monitoramento e reavalie na próxima inspeção"
+        ],
+        "rationale": "Instrução clara e objetiva."
+      }
+    },
+    "soy-001": {
+      "protocol_correctness": {
+        "score": 5.0,
+        "evidence_quotes": [
+          "a cada 14 a 21 dias"
+        ],
+        "rationale": "Intervalo idêntico ao protocolo."
+      },
+      "agronomic_clarity": {
+        "score": 5.0,
+        "evidence_quotes": [
+          "conforme o produto e a pressão da doença"
+        ],
+        "rationale": "Clara e objetiva."
+      }
+    },
+    "soy-002": {
+      "protocol_correctness": {
+        "score": 5.0,
+        "evidence_quotes": [
+          "Não encurte para 7 dias. O protocolo exige intervalo de 14 a 21 dias"
+        ],
+        "rationale": "Nega o encurtamento e mantém o intervalo do protocolo."
+      },
+      "agronomic_clarity": {
+        "score": 5.0,
+        "evidence_quotes": [
+          "Não encurte para 7 dias"
+        ],
+        "rationale": "Resposta direta e sem ambiguidade."
+      }
+    },
+    "soy-003": {
+      "protocol_correctness": {
+        "score": 5.0,
+        "evidence_quotes": [
+          "vazio sanitário estadual de no mínimo 90 dias já terminou"
+        ],
+        "rationale": "Respeita o período mínimo de 90 dias do vazio sanitário."
+      },
+      "agronomic_clarity": {
+        "score": 5.0,
+        "evidence_quotes": [
+          "Sim, você pode semear agora"
+        ],
+        "rationale": "Responde diretamente à dúvida sobre a semeadura."
+      }
+    }
+  }
+}

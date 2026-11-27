@@ -53,6 +53,7 @@ class EvalCase(BaseModel):
 
 
 class CriterionResult(BaseModel):
+    case_id: str | None = None
     criterion_id: str
     verdict: Verdict
     score: float | None = None
